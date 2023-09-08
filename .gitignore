@@ -1,0 +1,9 @@
+.DS_Store
+build/
+node_modules/
+.log
+generated_src/
+__generated__/
+test-results/
+.lambdatest/
+records.json
