@@ -1,7 +1,13 @@
 import { Options } from "@wdio/types";
 
 export const config: Options.Testrunner = {
-  runner: "browser",
+  runner: ["browser", {
+    viteConfig: {
+      optimizeDeps: {
+        exclude: ["@sqlite.org/sqlite-wasm"],
+      }
+    }
+  }],
   reporters: ["spec"],
   capabilities: [
     {
